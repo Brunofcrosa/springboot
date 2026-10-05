@@ -9,6 +9,7 @@ Esta pasta reúne os dois projetos, o enunciado e os PDFs de aula úteis para re
 - `ControllerMontar.md`: como montar a camada HTTP.
 - `RepositoryMontar.md`: como montar o acesso ao banco.
 - `ServiceMontar.md`: como montar a camada de negócio.
+- `DTOMontar.md`: quando e como separar os dados da API da entidade do banco.
 
 As duas versões usam Spring Boot, JPA, Flyway, Bean Validation, Lombok, PostgreSQL e Swagger.
 
