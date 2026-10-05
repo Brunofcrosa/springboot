@@ -1,0 +1,22 @@
+# Serviço de banco usado pela API durante o desenvolvimento.
+services:
+  postgres:
+    # Imagem oficial leve do PostgreSQL.
+    image: postgres:16-alpine
+    # Nome fixo para identificar o container no Docker Desktop.
+    container_name: salas-postgres
+    # Credenciais e nome do banco usados no application.properties.
+    environment:
+      POSTGRES_DB: salasdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    # A porta 5499 do computador aponta para a porta 5432 do container.
+    ports:
+      - "5499:5432"
+    # Volume mantém os dados mesmo que o container seja reiniciado.
+    volumes:
+      - salas-postgres-data:/var/lib/postgresql/data
+
+# Volume nomeado usado para persistir o banco local.
+volumes:
+  salas-postgres-data:
